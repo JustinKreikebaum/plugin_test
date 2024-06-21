@@ -1,0 +1,10 @@
+{
+  "auto-add-product": {
+    "label": {
+      "autoAddProductTab": "Additional Product",
+      "autoAddProductTitle": "Configure Additional Product",
+      "additionalProduct": "Additional Product",
+      "selectProduct": "Select Product"
+    }
+  }
+}

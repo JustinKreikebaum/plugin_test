@@ -1,0 +1,23 @@
+{% block sw_product_detail_tabs %}
+    {{ parent() }}
+    <sw-tabs-item
+        name="auto-add-product-tab"
+        :route="{ name: 'sw.product.detail.base.auto_add_product' }">
+        {{ $tc('auto-add-product.label.autoAddProductTab') }}
+    </sw-tabs-item>
+{% endblock %}
+
+{% block sw_product_detail_base %}
+    {{ parent() }}
+    <sw-container v-if="$route.name === 'sw.product.detail.base.auto_add_product'">
+        <sw-card title="$tc('auto-add-product.label.autoAddProductTitle')">
+            <sw-entity-single-select
+                v-model="additionalProductId"
+                :entity="productRepository"
+                :criteria="criteria"
+                :label="$tc('auto-add-product.label.additionalProduct')"
+                :placeholder="$tc('auto-add-product.label.selectProduct')"
+            />
+        </sw-card>
+    </sw-container>
+{% endblock %}
