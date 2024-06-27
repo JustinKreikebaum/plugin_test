@@ -1,0 +1,14 @@
+
+{% block sw_product_detail_custom %}
+    <div class="sw-product-detail-custom">
+        <label for="productNumberSelect">Select Product Number</label>
+        <sw-single-select
+            id="productNumberSelect"
+            v-model="selectedProduct"
+            :options="productNumbers"
+            labelProperty="label"
+            valueProperty="id"
+            placeholder="Please select a product number"
+        />
+    </div>
+{% endblock %}

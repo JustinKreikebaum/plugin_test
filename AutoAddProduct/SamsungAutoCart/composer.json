@@ -1,0 +1,31 @@
+{
+    "name": "mtf-samsung/samsung-auto-cart",
+    "description": "This plugin automatically adds products to the shopping cart if a reference product exists",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "~6.6.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "MtfSamsung\\SamsungAutoCart",
+        "label": {
+            "de-DE": "Samsung Warenkorb Auto-Adder",
+            "en-GB": "Samsung Cart Auto-Adder"
+        },
+	"description": {
+            "de-DE": "Dieses Plugin fügt automatisch Produkte in den Warenkorb, wenn ein Referenzprodukte existieren",
+            "en-GB": "This plugin automatically adds products to the shopping cart if a reference product exists"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "MtfSamsung\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MtfSamsung\\Tests\\": "tests/"
+        }
+    }
+}
